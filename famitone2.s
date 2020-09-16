@@ -868,7 +868,7 @@ ch4cut:
 
 	.if(FT_SFX_ENABLE)
 	;process all sound effect streams
-	lda #1
+	lda #6
 	jsr bankswitch_no_save
 
 	.if FT_SFX_STREAMS>0
@@ -887,8 +887,6 @@ ch4cut:
 	ldx #FT_SFX_CH3
 	jsr _FT2SfxUpdate
 	.endif
-	lda <MUSIC_BANK
-	jsr bankswitch_no_save
 
 
 	;send data from the output buffer to the APU

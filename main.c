@@ -12,7 +12,6 @@ void main(void)
 {
     famitone_init(1, music_music_data);
     famitonesfx_init(sounds_data);
-    music_play(0);
 
     while (1)
     {
