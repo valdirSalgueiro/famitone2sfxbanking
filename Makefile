@@ -1,4 +1,4 @@
-PROJECT_NAME = roniu
+PROJECT_NAME = test
 ROM = $(PROJECT_NAME).nes
 
 CC65_ROOT = ~/pvt/cc65
@@ -16,7 +16,7 @@ ASMSRC = crt0.s music.s sounds.s
 OBJS = $(ASMSRC:.s=.o) $(SRC:.c=.o)
 
 $(ROM): unrom.cfg $(OBJS)
-	$(LD) --dbgfile roniu.dbg -C unrom.cfg $(OBJS) nes.lib -o $@
+	$(LD) --dbgfile $(PROJECT_NAME).dbg -C unrom.cfg $(OBJS) nes.lib -o $@
 
 clean:
 	rm -f $(OBJS)
